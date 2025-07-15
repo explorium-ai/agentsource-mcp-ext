@@ -1,10 +1,12 @@
 {
   "dxt_version": "0.1",
-  "name": "agentsource-mcp-ext",
+  "name": "Explorium AgentSource",
+  "display_name": "Explorium AgentSource",
   "version": "1.0.0",
-  "description": "Our MCP server enables AI agents, apps and workflows tap into live company and contact data through a simple integration.",
+  "description": "Access live company and contact data through Explorium's AgentSource MCP server.",
+  "long_description": "This extension connects Claude to Explorium's AgentSource platform, enabling access to comprehensive company and contact data. Search for companies, find contacts, get detailed business information, and access real-time data to enhance your AI workflows.\n\nThe extension provides tools for company search, contact discovery, and data enrichment through Explorium's powerful data platform.",
   "author": {
-    "name": "explorium.ai",
+    "name": "Explorium.ai",
     "email": "support@explorium.ai",
     "url": "https://www.explorium.ai/"
   },
@@ -12,36 +14,25 @@
   "documentation": "https://developers.explorium.ai/reference/agentsource-mcp",
   "support": "https://developers.explorium.ai/reference/support-help-center",
   "icon": "assets/explorium_logo.jpeg",
+  "tools_generated": true,
   "server": {
     "type": "node",
     "entry_point": "server/index.js",
     "mcp_config": {
-      "command": "node",
+      "command": "npx",
       "args": [
-        "${__dirname}/server/index.js"
-      ],
-      "env": {
-        "API_KEY": "${user_config.api_key}",
-        "MCP_URL": "https://mcp-auth.explorium.ai/mcp"
-      }
+        "mcp-remote",
+        "https://mcp-auth.explorium.ai/mcp"
+      ]
     }
   },
-  "tools_generated": true,
   "keywords": [
     "AI",
     "company-data",
-    "contact-data",
+    "contact-data", 
     "business-intelligence",
-    "explorium"
+    "explorium",
+    "agentsource"
   ],
-  "license": "MIT",
-  "user_config": {
-    "api_key": {
-      "type": "string",
-      "title": "API Key",
-      "description": "Your API key for authenticating requests to Explorium.",
-      "sensitive": true,
-      "required": true
-    }
-  }
+  "license": "MIT"
 }
