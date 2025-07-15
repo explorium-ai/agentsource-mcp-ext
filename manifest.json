@@ -1,0 +1,47 @@
+{
+  "dxt_version": "0.1",
+  "name": "agentsource-mcp-ext",
+  "version": "1.0.0",
+  "description": "Our MCP server enables AI agents, apps and workflows tap into live company and contact data through a simple integration.",
+  "author": {
+    "name": "explorium.ai",
+    "email": "support@explorium.ai",
+    "url": "https://www.explorium.ai/"
+  },
+  "homepage": "https://www.explorium.ai/mcp/",
+  "documentation": "https://developers.explorium.ai/reference/agentsource-mcp",
+  "support": "https://developers.explorium.ai/reference/support-help-center",
+  "icon": "assets/explorium_logo.jpeg",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ],
+      "env": {
+        "API_KEY": "${user_config.api_key}",
+        "MCP_URL": "https://mcp-auth.explorium.ai/mcp"
+      }
+    }
+  },
+  "tools_generated": true,
+  "keywords": [
+    "AI",
+    "company-data",
+    "contact-data",
+    "business-intelligence",
+    "explorium"
+  ],
+  "license": "MIT",
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "API Key",
+      "description": "Your API key for authenticating requests to Explorium.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}
