@@ -28,12 +28,15 @@ jobs:
       - name: Install DXT tool
         run: npm install -g @anthropic-ai/dxt
 
+      - name: Create build directory
+        run: mkdir -p build
+
       - name: Package Claude Desktop Extension
-        run: dxt pack
+        run: dxt pack --output build/
 
       - name: Get package name
         id: package_name
-        run: echo "name=$(node -p 'require(\"./package.json\").name')" >> $GITHUB_OUTPUT
+        run: echo "name=$(node -p 'require("./package.json").name')" >> $GITHUB_OUTPUT
 
       # Create a new tag if this is a push to main (not a tag push)
       - name: Create new version tag
@@ -54,5 +57,5 @@ jobs:
         with:
           tag_name: ${{ steps.create_tag.outputs.tag }}
           name: Release ${{ steps.create_tag.outputs.tag }}
-          files: ${{ steps.package_name.outputs.name }}.dxt
+          files: "build/*.dxt"
           generate_release_notes: true
