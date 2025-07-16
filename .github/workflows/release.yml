@@ -28,10 +28,10 @@ jobs:
       - name: Build package
         run: npm run build
 
-      - name: Publish to npm
-        run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # This is required by setup-node, but we use trusted publishing
+#      - name: Publish to npm
+#        run: npm publish --provenance --access public
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # This is required by setup-node, but we use trusted publishing
 
       - name: Install DXT tool
         run: npm install -g @anthropic-ai/dxt
