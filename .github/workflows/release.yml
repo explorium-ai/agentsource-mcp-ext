@@ -46,8 +46,13 @@ jobs:
           git config user.email "github-actions@github.com"
           git tag $NEW_TAG
           git push origin $NEW_TAG
+          echo "tag=$NEW_TAG" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
+        if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.create_tag.outputs.tag }}
+          name: Release ${{ steps.create_tag.outputs.tag }}
           files: ${{ steps.package_name.outputs.name }}.dxt
+          generate_release_notes: true
