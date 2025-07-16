@@ -2,7 +2,7 @@
   "dxt_version": "0.1",
   "name": "Explorium AgentSource",
   "display_name": "Explorium AgentSource",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Access live company and contact data through Explorium's MCP server",
   "long_description": "Get real-time access to B2B company and contact data right inside Claude. Search and discover companies and decision-makers that match your ICP. Enrich with firmographics, technographics, financials, and more. Powered by Explorium’s harmonized data engine, aggregating over 50 top-tier sources to supercharge your go-to-market.",
   "author": {
