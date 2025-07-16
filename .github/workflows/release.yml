@@ -2,8 +2,8 @@ name: Release and Publish
 
 on:
   push:
-    tags:
-      - 'v*.*.*'
+    branches:
+      - main
 
 jobs:
   release:
@@ -19,19 +19,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18.x'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: "18.x"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build package
         run: npm run build
-
-#      - name: Publish to npm
-#        run: npm publish --provenance --access public
-#        env:
-#          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # This is required by setup-node, but we use trusted publishing
 
       - name: Install DXT tool
         run: npm install -g @anthropic-ai/dxt
@@ -41,9 +36,21 @@ jobs:
 
       - name: Get package name
         id: package_name
-        run: echo "name=$(node -p "require('./package.json').name")" >> $GITHUB_OUTPUT
+        run: echo "name=$(node -p \"require('./package.json').name\")" >> $GITHUB_OUTPUT
+
+      # Create a new tag if this is a push to main (not a tag push)
+      - name: Create new version tag
+        if: github.ref == 'refs/heads/main'
+        id: create_tag
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          NEW_TAG="v$VERSION"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag $NEW_TAG
+          git push origin $NEW_TAG
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: ${{ steps.package_name.outputs.name }}.dxt 
+          files: ${{ steps.package_name.outputs.name }}.dxt
