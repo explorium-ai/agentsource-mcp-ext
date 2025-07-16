@@ -1,6 +1,6 @@
 # Explorium AgentSource DXT Extension
 
-![Explorium Logo](assets/explorium_logo.png)
+![Explorium Logo](logo.png)
 
 ## Overview
 
