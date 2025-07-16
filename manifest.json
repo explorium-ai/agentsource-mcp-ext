@@ -12,7 +12,10 @@
   },
   "homepage": "https://www.explorium.ai/mcp/",
   "documentation": "https://developers.explorium.ai/reference/agentsource-mcp",
-  "repository": "https://github.com/explorium-ai/agentsource-mcp-ext",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/explorium-ai/agentsource-mcp-ext"
+  },
   "support": "https://developers.explorium.ai/reference/support-help-center",
   "icon": "assets/explorium_logo.png",
   "tools_generated": true,
