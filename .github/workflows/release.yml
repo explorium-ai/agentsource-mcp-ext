@@ -25,9 +25,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build package
-        run: npm run build
-
       - name: Install DXT tool
         run: npm install -g @anthropic-ai/dxt
 
