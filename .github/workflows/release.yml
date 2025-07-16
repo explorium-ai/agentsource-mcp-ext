@@ -33,7 +33,7 @@ jobs:
 
       - name: Get package name
         id: package_name
-        run: echo "name=$(node -p \"require('./package.json').name\")" >> $GITHUB_OUTPUT
+        run: echo "name=$(node -p 'require(\"./package.json\").name')" >> $GITHUB_OUTPUT
 
       # Create a new tag if this is a push to main (not a tag push)
       - name: Create new version tag
