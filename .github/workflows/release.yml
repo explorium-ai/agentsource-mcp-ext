@@ -32,7 +32,9 @@ jobs:
         run: mkdir -p build
 
       - name: Package Claude Desktop Extension
-        run: dxt pack --output build/
+        run: |
+          dxt pack
+          mv *.dxt build/
 
       - name: Get package name
         id: package_name
