@@ -1,10 +1,10 @@
 {
   "dxt_version": "0.1",
-  "name": "Explorium AgentSource",
-  "display_name": "Explorium AgentSource",
-  "version": "1.0.7",
-  "description": "Access live company and contact data through Explorium's MCP server",
-  "long_description": "Get real-time access to B2B company and contact data right inside Claude. Search and discover companies and decision-makers that match your ICP. Enrich with firmographics, technographics, financials, and more. Powered by Explorium’s harmonized data engine, aggregating over 50 top-tier sources to supercharge your go-to-market.",
+  "name": "Explorium Business Data Hub",
+  "display_name": "Explorium Business Data Hub",
+  "version": "1.0.8",
+  "description": "Discover companies, contacts, and business insights—powered by dozens of trusted external data sources.",
+  "long_description": "Search any company or professional for everything from emails and phone numbers to roles, growth signals, tech stack, business events, website changes, and more. Find qualified leads, research prospects, identify talent, or craft personalized outreach—all without leaving chat. Explorium delivers fresh, compliant B2B data through a comprehensive enrichment hub.",
   "author": {
     "name": "Explorium.ai",
     "email": "support@explorium.ai",
