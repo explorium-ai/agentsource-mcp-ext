@@ -23,10 +23,9 @@
     "type": "node",
     "entry_point": "server/index.js",
     "mcp_config": {
-      "command": "npx",
+      "command": "node",
       "args": [
-        "-y",
-        "mcp-remote",
+        "${__dirname}/node_modules/mcp-remote/dist/proxy.js",
         "https://mcp-claude-ext.explorium.ai/mcp"
       ]
     }
