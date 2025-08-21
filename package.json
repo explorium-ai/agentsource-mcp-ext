@@ -1,6 +1,6 @@
 {
   "name": "explorium-mcp-extension",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Explorium MCP Extension for Claude Desktop using mcp-remote",
   "main": "server/index.js",
   "scripts": {
