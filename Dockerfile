@@ -12,11 +12,15 @@ RUN --mount=type=cache,target=/root/.npm npm ci --only=production
 COPY server/ ./server/
 COPY manifest.json logo.png ./
 
+# Add entrypoint wrapper
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 # Set environment to production
 ENV NODE_ENV=production
 ENV API_ACCESS_TOKEN=your-api-access-token-here
 
 EXPOSE 44280
 
-# Start the application, expanding API_ACCESS_TOKEN at runtime
-ENTRYPOINT [ "sh", "-c", "npx mcp-remote https://mcp-docker-registry.explorium.ai/mcp --header \"Authorization: Bearer ${API_ACCESS_TOKEN}\"" ]
+# Use wrapper script as entrypoint
+ENTRYPOINT ["/entrypoint.sh"]
