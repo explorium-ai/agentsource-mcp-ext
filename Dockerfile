@@ -15,7 +15,6 @@ COPY manifest.json logo.png ./
 # Set environment to production
 ENV NODE_ENV=production
 EXPOSE 44280
-ENV API_ACCESS_TOKEN=your-api-access-token-here
 
-# Start the application using MCP remote with API access token from environment
-ENTRYPOINT ["npx", "mcp-remote", "https://mcp-docker-registry.explorium.ai/mcp", "--header", "Authorization: Bearer ${API_ACCESS_TOKEN}"]
+# Start the application, expanding API_ACCESS_TOKEN at runtime
+ENTRYPOINT [ "sh", "-c", "npx mcp-remote https://mcp-docker-registry.explorium.ai/mcp --header \"Authorization: Bearer ${API_ACCESS_TOKEN}\"" ]
