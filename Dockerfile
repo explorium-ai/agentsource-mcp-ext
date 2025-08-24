@@ -14,6 +14,8 @@ COPY manifest.json logo.png ./
 
 # Set environment to production
 ENV NODE_ENV=production
+ENV API_ACCESS_TOKEN=your-api-access-token-here
+
 EXPOSE 44280
 
 # Start the application, expanding API_ACCESS_TOKEN at runtime
