@@ -18,6 +18,23 @@
 - Integrate Explorium data into AI workflows
 - Secure, real-time access via MCP protocol
 
+### Examples
+
+**Example 1: Partnership Opportunity Research**
+```
+Who should I contact for partnership with monday.com? Get anyone who can promote a partnership with them. Bring me all the contact details you can find
+```
+
+**Example 2: Business Challenge Analysis**
+```
+What are the business challenges of amazon?
+```
+
+**Example 3: Leadership Team Discovery**
+```
+Get the engineering leadership team at Palo Alto Networks
+```
+
 ## Usage
 
 This extension is intended for use **only within Claude Desktop**. No manual installation, configuration, or server setup is required.
