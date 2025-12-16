@@ -17,7 +17,7 @@
   "homepage": "https://www.vibeprospecting.ai",
   "documentation": "https://developers.explorium.ai/mcp-docs/vibeprospecting",
   "support": "https://www.vibeprospecting.ai/contact-us",
-  "icon": "vp-logo.png",
+  "icon": "logo.png",
   "tools_generated": true,
   "server": {
     "type": "node",
