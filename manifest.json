@@ -1,22 +1,22 @@
 {
   "manifest_version": "0.2",
-  "name": "Explorium Business Data Hub",
-  "display_name": "Explorium Business Data Hub",
-  "version": "1.3.1",
-  "description": "Discover companies, contacts, and business insights—powered by dozens of trusted external data sources.",
-  "long_description": "Search any company or professional for everything from emails and phone numbers to roles, growth signals, tech stack, business events, website changes, and more. Find **qualified leads**, research prospects, **identify talent**, or **craft personalized outreach**—all without leaving chat. Explorium delivers fresh, compliant **B2B Data** through a comprehensive enrichment hub.",
+  "name": "Vibe Prospecting",
+  "display_name": "Vibe Prospecting",
+  "version": "2.0.0",
+  "description": "Power your chat with B2B data to create lead lists, research companies, personalize your outreach, and more.",
+  "long_description": "Search any company or professional to access emails, phone numbers, roles, growth signals, tech stack details, business events, website changes, and more. Use it to **find qualified leads**, **research prospects**, **create personalized outreach**, or **identify talent**, all directly within your chat. Vibe Prospecting provides fresh and compliant B2B data through a complete enrichment hub.",
   "author": {
-    "name": "Explorium.ai",
-    "email": "support@explorium.ai",
-    "url": "https://www.explorium.ai/"
+    "name": "vibeprospecting.ai",
+    "email": "support@vibeprospecting.ai",
+    "url": "https://www.vibeprospecting.ai/"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/explorium-ai/agentsource-mcp-ext"
   },
-  "homepage": "https://www.explorium.ai/mcp/",
-  "documentation": "https://developers.explorium.ai/reference/agentsource-mcp",
-  "support": "https://developers.explorium.ai/reference/support-help-center",
+  "homepage": "https://www.vibeprospecting.ai",
+  "documentation": "https://developers.explorium.ai/mcp-docs/vibeprospecting",
+  "support": "https://www.vibeprospecting.ai/contact-us",
   "icon": "logo.png",
   "tools_generated": true,
   "server": {
@@ -26,7 +26,7 @@
       "command": "node",
       "args": [
         "${__dirname}/node_modules/mcp-remote/dist/proxy.js",
-        "https://mcp-claude-ext.explorium.ai/mcp"
+        "https://mcp-ext.vibeprospecting.ai/mcp"
       ]
     }
   },
@@ -34,10 +34,10 @@
     "AI",
     "company-data",
     "contact-data",
-    "business-intelligence",
-    "explorium",
-    "B2B",
-    "agentsource"
+    "b2b-data",
+    "vibe-prospecting",
+    "business-insights",
+    "leads"
   ],
   "license": "MIT",
   "compatibility": {
