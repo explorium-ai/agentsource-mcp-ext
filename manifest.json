@@ -1,8 +1,8 @@
 {
-  "manifest_version": "0.2",
+  "manifest_version": "0.3",
   "name": "Vibe Prospecting",
   "display_name": "Vibe Prospecting",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Power your chat with B2B data to create lead lists, research companies, personalize your outreach, and more.",
   "long_description": "Search any company or professional to access emails, phone numbers, roles, growth signals, tech stack details, business events, website changes, and more. Use it to **find qualified leads**, **research prospects**, **create personalized outreach**, or **identify talent**, all directly within your chat. Vibe Prospecting provides fresh and compliant B2B data through a complete enrichment hub.",
   "author": {
