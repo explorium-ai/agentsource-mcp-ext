@@ -1,16 +1,20 @@
 {
   "name": "explorium-mcp-extension",
-  "version": "2.0.1",
+  "version": "2.0.9",
   "description": "Explorium MCP Extension for Claude Desktop using mcp-remote",
   "main": "server/index.js",
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "verify": "node -e \"require('node:fs').accessSync('node_modules/mcp-remote/dist/proxy.js')\""
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
     "express": "^5.2.1",
-    "mcp-remote": "^0.1.38"
+    "mcp-remote": "https://github.com/explorium-ai/mcp-remote/releases/download/v0.2.1-explorium.1/mcp-remote-0.2.1.tgz"
   },
   "author": "explorium.ai",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.18.1"
+  }
 }
