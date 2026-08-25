@@ -10,7 +10,7 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
     "express": "^5.2.1",
-    "mcp-remote": "git+https://github.com/explorium-ai/mcp-remote.git#56e61d23c305c8872a7d38c512d255bf7a2dbec7"
+    "mcp-remote": "https://github.com/explorium-ai/mcp-remote/releases/download/v0.2.1-explorium.1/mcp-remote-0.2.1.tgz"
   },
   "author": "explorium.ai",
   "license": "MIT",
